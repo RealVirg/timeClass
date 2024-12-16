@@ -27,13 +27,3 @@ class GameTime:
 
     def show_time(self):
         return f"{self.get_current_name_day()} {self.hours}:{self.minutes:02d}"
-
-
-gt = GameTime()
-
-gt.get_current_name_day()
-while gt.days < 7:
-    print(f"\r" + " " * 50, end="")
-    print(f"\r{gt.show_time()}", end="")
-    gt.update()
-    time.sleep(1)
